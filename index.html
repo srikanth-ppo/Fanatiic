@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fanatiic - SmartStack</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            /* Animation for fading in */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Navigation Menu */
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #f0a500;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background-color: #f9f9f9;
+            opacity: 0;
+            animation: slideIn 1.5s forwards;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        /* Video Section */
+        .video-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        video {
+            max-width: 80%;
+            height: auto;
+            border: 5px solid #333;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 40px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Scroll-triggered animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header with logo -->
+    <header>
+        <img src="kk.jpg" alt="Fanatiic Logo" class="logo">
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#product">SmartStack</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#goals">Future Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Fanatiic - SmartStack</h1>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2>Watch Our Product in Action</h2>
+        <!-- Video Embed - Play a local video -->
+        <video controls autoplay>
+            <source src="smartstack-promo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section animate-on-scroll">
+        <h2>About Fanatiic</h2>
+        <p>Fanatiic is a forward-thinking company dedicated to innovating products that fit seamlessly into your lifestyle. Our latest creation, SmartStack, redefines the concept of multipurpose storage by integrating flexibility, style, and practicality into one smart solution.</p>
+    </section>
+
+    <!-- SmartStack Product Section -->
+    <section id="product" class="section animate-on-scroll">
+        <h2>SmartStack - The Multipurpose Shelf</h2>
+        <p>SmartStack is an innovative multipurpose shelf designed to meet the modern-day storage and workspace needs. With detachable shelves, a foldable study table, and a modular design, it adapts to your requirements with ease, providing both functionality and elegance in every setting.</p>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section animate-on-scroll">
+        <h2>Our Achievements</h2>
+        <p>Fanatiic has been recognized for our innovation in product design and user-centric solutions. Our products have been featured in numerous exhibitions, receiving accolades for their forward-thinking functionality and sustainable design.</p>
+    </section>
+
+    <!-- Future Goals Section -->
+    <section id="goals" class="section animate-on-scroll">
+        <h2>Future Goals</h2>
+        <p>We are continuously working to innovate and expand our product line. Our goal is to offer solutions that not only meet but exceed the expectations of our customers, blending technology with modern design principles for a better tomorrow.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section animate-on-scroll">
+        <h2>Contact Us</h2>
+        <p>Email: support@fanatiic.com | Phone: +123 456 7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Fanatiic. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll-triggered animations
+        document.addEventListener('scroll', function () {
+            var elements = document.querySelectorAll('.animate-on-scroll');
+            var windowHeight = window.innerHeight;
+            elements.forEach(function (element) {
+                var positionFromTop = element.getBoundingClientRect().top;
+                if (positionFromTop - windowHeight <= -100) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
